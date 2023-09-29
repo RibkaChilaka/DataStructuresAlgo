@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var a = [2, 7, 12, 17, 19, 25, 35, 39];
+        n = a.length;
+        s = 25;
+        function binarySearch(a, s) {
+            let start = 0;
+            let end = n;
+            while (start <= end) {
+                let middle = Math.floor((start + end) / 2);
+                if (a[middle] === s) {
+                    return middle;
+                }
+                else if (s > a[middle]) {
+                    start = middle + 1;
+                }
+                else {
+                    end = middle - 1;
+                }
+            }
+            return -1;
+        }
+        result = binarySearch(a, s)
+        if (result >= 0) {
+            console.log("element found at: " + result);
+        }
+        else {
+            console.log("element not found");
+        }
+    </script>
+</body>
+
+</html>
