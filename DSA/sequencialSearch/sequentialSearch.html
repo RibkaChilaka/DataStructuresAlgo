@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //implementation of sequential search
+        var a = [6, 2, 5, 3, 9, 1];
+        n = a.length;
+        let min = a[0];
+        let max = a[0];
+        for (var i = 1; i < n; i++) {
+            if (a[i] < min) {
+                min = a[i];
+            }
+            else if(a[i] > max){
+                max = a[i];
+            }
+        }
+        console.log("given array is: " + a);
+        console.log("minimum element is: " + min);
+        console.log("maximum element is: " + max);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // searching an element from the given array
+        var a=[7,4,1,8,5,2]
+        n=a.length;
+        x=8;
+        function searching(a,n,x){
+            for(var i=0; i<n; i++){
+                if(a[i]==x){
+                    return i;
+                }
+            }
+            return -1;
+        }
+        console.log("given array is: " +a);
+        result=searching(a,n,x);
+        if(result>=0){
+            console.log(`element found at a[${result}]`);
+        }else{
+            console.log(`element not found`);
+        }
+    </script>
+</body>
+</html>

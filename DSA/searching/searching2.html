@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //finding max and min elements from the given unsorted array after sorting the elements by using selection sorting 
+        var a=[6,5,4,8,5,2]
+        n=a.length-1;
+        function selectionSort(a,n){
+            for(var i=0; i<=n; i++){
+                for(var j=i+1; j<=n; j++){
+                    if(a[i]>a[j]){
+                        temp=a[i];
+                        a[i]=a[j];
+                        a[j]=temp;
+                    }
+                }
+            }
+        }
+        console.log("before sorting the elements are: "+a);
+        selectionSort(a,n);
+        // let array1=[...a]
+        console.log("after soring the elements are: "+a)
+        console.log("minimum element is: "+a[0]);
+        console.log("minimum element is: "+a[n]);
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var a = [7, 4, 1, 8, 52, 9, 6, 3];
+        n = a.length;
+        function insertionSort(a, n) {
+            for (let i = 1; i < n; i++) {
+                temp = a[i];
+                for (var j=i-1; j>=0 && a[j]>temp; j--) {
+                    a[j + 1] = a[j];
+                }
+                a[j+1]= temp;
+            }
+        }
+        console.log(`before sorting the elements are: ${a}`);
+        insertionSort(a,n);
+        console.log(`after sorting the elements are: ${a}`);
+    </script>
+</body>
+
+</html>
