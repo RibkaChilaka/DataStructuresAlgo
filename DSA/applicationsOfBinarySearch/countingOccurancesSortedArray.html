@@ -1,0 +1,33 @@
+<!-- the following example shows counting occurances on sorted array -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a=[1,5,5,5,7,8,9,10];
+        n=a.length-1;
+        s=5;
+        function countOccurance(a,n){
+            let count=0;
+            for(var i=0; i<=n; i++){
+                if(a[i]==s){
+                    count=count+1;
+                }
+            }
+            return count;
+        }
+        result=countOccurance(a,n);
+        console.log(`given array is: ${a}`);
+        if(result>=0){
+            console.log("Count occurances of an element of 5 is: "+result);
+        }
+        else{
+            console.log("element not found");
+        }
+    </script>
+</body>
+</html>
